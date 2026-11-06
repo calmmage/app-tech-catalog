@@ -1,0 +1,2598 @@
+# All techs and frameworks to make an app
+
+Petr's ask: "make me a full list of all possible techs and frameworks to do an app — rust - iced … include like 1000 items. all. cli frameworks for tui building, languages, game engines, macos native, electron, web".
+
+Format: `language - framework` where the language matters, plain name otherwise. Each item appears once, in its main section.
+
+**Total: 2429 items in 54 sections.**
+
+## CLI frameworks (arguments, commands) — 105
+
+- rust - clap
+- rust - argh
+- rust - bpaf
+- rust - pico-args
+- rust - lexopt
+- rust - gumdrop
+- go - cobra
+- go - urfave/cli
+- go - kong
+- go - kingpin
+- go - pflag
+- go - ff
+- go - viper (config)
+- go - mitchellh/cli
+- python - argparse
+- python - click
+- python - typer
+- python - fire
+- python - docopt
+- python - cyclopts
+- python - tyro
+- python - jsonargparse
+- python - plac
+- python - cement
+- python - cliff
+- python - cleo
+- python - rich-click
+- node - commander
+- node - yargs
+- node - oclif
+- node - meow
+- node - cac
+- node - citty
+- node - clipanion
+- node - gluegun
+- node - sade
+- node - minimist
+- node - arg
+- node - vorpal
+- node - caporal
+- deno - cliffy
+- deno - std/cli parseArgs
+- bun - util.parseArgs
+- ruby - thor
+- ruby - optparse
+- ruby - gli
+- ruby - dry-cli
+- ruby - slop
+- ruby - tty-option
+- php - symfony console
+- php - laravel zero
+- php - minicli
+- java - picocli
+- java - jcommander
+- java - args4j
+- java - airline
+- java - spring shell
+- java - jline
+- kotlin - clikt
+- kotlin - kotlinx-cli
+- scala - scopt
+- scala - decline
+- scala - mainargs
+- scala - case-app
+- c# - system.commandline
+- c# - spectre.console.cli
+- c# - commandlineparser
+- c# - cocona
+- c# - consoleappframework
+- f# - argu
+- swift - swift-argument-parser
+- c++ - cli11
+- c++ - cxxopts
+- c++ - argparse (p-ranav)
+- c++ - boost.program_options
+- c++ - tclap
+- c++ - lyra
+- c++ - gflags
+- c - getopt
+- c - argp
+- c - argtable3
+- haskell - optparse-applicative
+- haskell - cmdargs
+- ocaml - cmdliner
+- elixir - optimus
+- elixir - escript + optionparser
+- zig - zig-clap
+- zig - yazap
+- nim - cligen
+- dart - args
+- dart - mason
+- crystal - admiral
+- crystal - clim
+- julia - comonicon
+- r - optparse
+- lua - argparse
+- perl - getopt::long
+- perl - app::cmd
+- clojure - tools.cli
+- clojure - babashka cli
+- racket - racket/cmdline
+- gleam - glint
+- v - flag
+- odin - core:flags
+- powershell - advanced functions / cmdlets
+
+## CLI prompts, colors, progress — 58
+
+- node - inquirer
+- node - @inquirer/prompts
+- node - enquirer
+- node - prompts
+- node - clack
+- node - chalk
+- node - kleur
+- node - picocolors
+- node - ora
+- node - listr2
+- node - cli-progress
+- node - boxen
+- node - cli-table3
+- node - figlet
+- python - rich
+- python - questionary
+- python - inquirerpy
+- python - tqdm
+- python - alive-progress
+- python - colorama
+- python - tabulate
+- python - prettytable
+- python - halo
+- python - pyfiglet
+- go - huh (charm)
+- go - survey
+- go - promptui
+- go - lipgloss
+- go - glamour
+- go - charm log
+- go - pterm
+- go - fatih/color
+- go - mpb
+- rust - dialoguer
+- rust - inquire
+- rust - cliclack
+- rust - indicatif
+- rust - console
+- rust - owo-colors
+- rust - comfy-table
+- rust - tabled
+- rust - termimad
+- ruby - tty-prompt
+- ruby - tty-progressbar
+- ruby - pastel
+- ruby - highline
+- c# - spectre.console
+- c# - sharprompt
+- java - jansi
+- kotlin - mordant
+- php - laravel prompts
+- shell - gum
+- shell - fzf
+- shell - skim
+- shell - dialog
+- shell - whiptail
+- shell - zenity
+- shell - yad
+
+## TUI frameworks — 79
+
+- rust - ratatui
+- rust - cursive
+- rust - crossterm
+- rust - termion
+- rust - termwiz
+- rust - tui-realm
+- rust - r3bl_tui
+- rust - iocraft
+- rust - appcui
+- rust - tui-rs (legacy)
+- go - bubbletea
+- go - bubbles
+- go - tview
+- go - tcell
+- go - termui
+- go - gocui
+- go - termbox-go
+- go - cview
+- go - gowid
+- go - wish (tui over ssh)
+- python - textual
+- python - textual-web (tui in browser)
+- python - urwid
+- python - prompt_toolkit
+- python - curses
+- python - blessed
+- python - npyscreen
+- python - asciimatics
+- python - pytermgui
+- python - py_cui
+- python - picotui
+- python - pytermtk
+- node - ink
+- node - ink-ui
+- node - blessed
+- node - neo-blessed
+- node - blessed-contrib
+- node - terminal-kit
+- node - react-blessed
+- node - pastel
+- bun - opentui
+- deno - deno_tui
+- c - ncurses
+- c - notcurses
+- c - termbox2
+- c - newt
+- c - pdcurses
+- c - s-lang
+- c - cdk (curses development kit)
+- c++ - ftxui
+- c++ - finalcut
+- c++ - tvision (turbo vision)
+- c++ - imtui
+- c# - terminal.gui
+- c# - consolonia
+- java - lanterna
+- java - jexer
+- kotlin - mosaic
+- kotlin - kotter
+- haskell - brick
+- haskell - vty
+- ocaml - notty
+- ocaml - nottui
+- ocaml - minttea
+- zig - libvaxis
+- elixir - ratatouille
+- elixir - owl
+- elixir - garnish (tui over ssh)
+- ruby - tty toolkit
+- ruby - curses gem
+- nim - illwill
+- php - php-tui
+- lua - ltui
+- perl - curses::ui
+- dart - dart_console
+- swift - swifttui
+- julia - term.jl
+- common lisp - croatoan
+- d - arsd terminal
+
+## Terminal, shell and editor platforms — 18
+
+- tmux plugins
+- zellij plugins (rust → wasm)
+- wezterm lua
+- kitty kittens (python)
+- neovim plugins (lua)
+- vim plugins (vimscript / vim9script)
+- emacs packages (elisp)
+- helix plugins (steel)
+- zed extensions (rust → wasm)
+- vs code extensions
+- jetbrains plugins
+- sublime text plugins (python)
+- oh-my-zsh plugins
+- fish functions
+- nushell plugins
+- xonsh
+- starship custom modules
+- warp workflows
+
+## Languages — 153
+
+- rust
+- go
+- python
+- javascript
+- typescript
+- c
+- c++
+- c#
+- f#
+- visual basic .net
+- java
+- kotlin
+- scala
+- groovy
+- clojure
+- swift
+- objective-c
+- objective-c++
+- dart
+- ruby
+- crystal
+- elixir
+- erlang
+- gleam
+- haskell
+- purescript
+- elm
+- ocaml
+- reasonml
+- rescript
+- idris
+- agda
+- lean 4
+- zig
+- nim
+- odin
+- v (vlang)
+- d
+- jai
+- carbon
+- mojo
+- moonbit
+- julia
+- r
+- matlab
+- octave
+- lua
+- luau
+- luajit
+- moonscript
+- fennel
+- teal
+- terra
+- php
+- hack
+- perl
+- raku
+- tcl
+- bash
+- zsh
+- fish
+- nushell
+- powershell
+- applescript
+- awk
+- common lisp
+- scheme
+- racket
+- guile
+- chez scheme
+- chicken scheme
+- clojurescript
+- janet
+- hy
+- emacs lisp
+- smalltalk
+- pharo
+- squeak
+- self
+- io
+- red
+- rebol
+- factor
+- forth
+- object pascal (delphi)
+- free pascal
+- ada
+- fortran
+- cobol
+- freebasic
+- purebasic
+- qb64
+- visual basic 6
+- xojo language
+- livecode script
+- haxe
+- coffeescript
+- livescript
+- civet
+- imba
+- assemblyscript
+- webassembly text (wat)
+- solidity
+- vyper
+- move
+- cairo (starknet)
+- apex
+- abap
+- sql
+- pl/pgsql
+- prolog
+- mercury
+- hare
+- c3
+- vale
+- roc
+- unison
+- koka
+- pony
+- chapel
+- wren
+- squirrel
+- angelscript
+- gdscript
+- rhai
+- gml (gamemaker language)
+- verse (fortnite)
+- monkey c (garmin)
+- brightscript (roku)
+- ballerina
+- grain
+- motoko
+- mint
+- beef
+- jakt
+- hylo
+- inko
+- lobster
+- toit
+- futhark
+- cuda
+- glsl
+- hlsl
+- wgsl
+- metal shading language
+- slang (shading)
+- vala
+- scratch
+- snap!
+- blockly
+- unreal blueprints
+- x86 / arm assembly
+- uxntal
+
+## Game engines (editor-first) — 48
+
+- unity
+- unreal engine
+- godot
+- redot (godot fork)
+- defold
+- gamemaker
+- construct 3
+- gdevelop
+- cocos creator
+- cocos2d-x
+- o3de (open 3d engine)
+- cryengine
+- amazon lumberyard (legacy)
+- stride
+- flax engine
+- unigine
+- source 2
+- s&box (c#)
+- dagor engine
+- castle game engine (pascal)
+- armory3d
+- torque 3d
+- leadwerks / ultra engine
+- wicked engine
+- lumix engine
+- urho3d / u3d
+- rebelfork (rbfx)
+- jmonkeyengine
+- panda3d
+- ursina
+- harfang 3d
+- fyrox
+- playcanvas
+- recoil engine (spring rts)
+- rpg maker
+- ren'py
+- twine
+- adventure game studio
+- solarus
+- stencyl
+- buildbox
+- clickteam fusion
+- gb studio
+- ct.js
+- bitsy
+- flowlab
+- roblox studio (luau)
+- fortnite uefn (verse)
+
+## Game frameworks and libraries (code-first) — 79
+
+- c - raylib
+- c - sdl2 / sdl3
+- c++ - sfml
+- c - allegro
+- c - sokol
+- c# - monogame
+- c# - fna
+- c# - xna (legacy)
+- c# - raylib-cs
+- lua - love2d
+- lua - solar2d
+- lua - gideros
+- rust - bevy
+- rust - macroquad
+- rust - miniquad
+- rust - ggez
+- rust - comfy
+- rust - notan
+- rust - kiss3d
+- rust - piston (legacy)
+- rust - amethyst (legacy)
+- go - ebitengine
+- go - pixel
+- go - raylib-go
+- go - g3n
+- go - oak
+- python - pygame
+- python - pygame-ce
+- python - pyglet
+- python - arcade
+- python - pyxel
+- python - cocos2d (legacy)
+- java - libgdx
+- java - lwjgl
+- java - litiengine
+- kotlin - korge
+- haxe - haxeflixel
+- haxe - heaps
+- haxe - openfl
+- haxe - kha
+- haxe - ceramic
+- js - phaser
+- js - pixi.js
+- js - excalibur.js
+- js - kaplay (kaboom)
+- js - melonjs
+- js - littlejs
+- js - kontra
+- js - impact.js
+- c++ - irrlicht
+- c++ - olc pixel game engine
+- c++ - axmol
+- zig - mach
+- zig - raylib-zig
+- odin - vendor raylib / sdl
+- nim - naylib
+- nim - nico
+- dart - flame
+- ruby - dragonruby game toolkit
+- ruby - gosu
+- ruby - ruby2d
+- blitzmax
+- c - gbdk (game boy)
+- c++ - butano (gba)
+- c - devkitpro (gba / ds / switch homebrew)
+- c - libdragon (n64)
+- c - pvsneslib (snes)
+- c - sgdk (mega drive)
+- c - cc65 (nes / c64)
+- lua / c - playdate sdk
+- java - minecraft mods (fabric / forge / neoforge)
+- java - minecraft server plugins (paper / spigot)
+- minecraft bedrock add-ons / script api
+- lua - garry's mod
+- c# - terraria tmodloader
+- c# - bepinex / harmony (unity modding)
+- lua - factorio mods
+- lua - world of warcraft addons
+- c# - vrchat udonsharp
+
+## Fantasy consoles and tiny platforms — 9
+
+- pico-8
+- picotron
+- tic-80
+- pixel vision 8
+- wasm-4
+- uxn / varvara
+- decker
+- lowres nx
+- arduboy
+
+## Physics engines — 18
+
+- box2d
+- chipmunk2d
+- matter.js
+- planck.js
+- rapier
+- avian (bevy)
+- jolt physics
+- physx
+- bullet
+- havok
+- ode
+- newton dynamics
+- cannon-es
+- ammo.js
+- oimo.js
+- mujoco
+- bepu physics
+- pymunk
+
+## macOS and Apple native — 77
+
+- swift - swiftui
+- swift - appkit
+- objective-c - cocoa / appkit
+- swift - mac catalyst
+- swift - swiftdata
+- swift - core data
+- swift - cloudkit
+- swift - combine
+- swift - observation (@observable)
+- swift - spritekit
+- swift - scenekit
+- swift - realitykit
+- swift - arkit
+- swift - gameplaykit
+- swift - avfoundation
+- swift - core animation
+- swift - core graphics / quartz
+- swift - core image
+- swift - core ml
+- swift - create ml
+- swift - vision
+- swift - natural language
+- swift - foundation models (on-device llm)
+- swift - speech
+- swift - app intents
+- swift - widgetkit
+- swift - activitykit (live activities)
+- swift - menubarextra
+- swift - nsstatusitem menu bar apps
+- swift - storekit 2
+- swift - mapkit
+- swift - healthkit
+- swift - homekit
+- swift - eventkit
+- swift - pdfkit
+- swift - webkit (wkwebview)
+- swift - screencapturekit
+- swift - xpc services
+- swift - launchd agents / smappservice
+- swift - safari web extensions
+- swift - share extensions
+- swift - finder sync extensions
+- swift - quick look extensions
+- swift - core spotlight
+- swift - network extension
+- swift - system extensions / driverkit
+- swift - endpoint security
+- swift - accessibility api (axuielement)
+- swift - core bluetooth
+- swift - multipeer connectivity
+- swift - group activities (shareplay)
+- swift - the composable architecture (tca)
+- swift - rxswift
+- swift - snapkit
+- swift - alamofire
+- swift - sparkle (auto-updates)
+- swift - swift package manager
+- swift - tuist
+- swift - xcodegen
+- swift - swiftwasm
+- swift playgrounds
+- applescript - script editor apps
+- jxa (javascript for automation)
+- automator
+- shortcuts
+- hammerspoon (lua)
+- raycast extensions (react / ts)
+- alfred workflows
+- swiftbar / xbar plugins
+- übersicht widgets
+- bettertouchtool scripts
+- keyboard maestro macros
+- python - pyobjc
+- python - rumps (menu bar)
+- python - py2app
+- ruby - rubymotion
+- c# - .net for macos (xamarin.mac)
+
+## Windows native — 29
+
+- c# - winui 3
+- c# - windows app sdk
+- c# - wpf
+- c# - winforms
+- c# - uwp
+- c# - wpf ui
+- c# - modernwpf
+- c# - mahapps.metro
+- c# - material design in xaml
+- c# - caliburn.micro
+- c# - prism
+- c# - communitytoolkit.mvvm
+- c# - reactiveui
+- c++ - win32 api
+- c++ - mfc
+- c++ - atl / wtl
+- c++ - c++/winrt
+- c++ - direct2d / directwrite
+- rust - windows-rs
+- rust - native-windows-gui
+- go - walk
+- delphi - vcl
+- powershell - winforms / wpf scripts
+- autohotkey
+- autoit
+- powertoys run / command palette extensions
+- react native for windows
+- hta (html applications, legacy)
+- windows script host (vbscript / jscript)
+
+## Linux native — 29
+
+- c - gtk 4
+- c - libadwaita
+- vala - gtk
+- python - pygobject
+- javascript - gjs
+- rust - gtk4-rs
+- rust - relm4
+- rust - libcosmic (cosmic desktop)
+- c++ - gtkmm
+- c++ - kde frameworks
+- qml - kirigami
+- vala - granite (elementary os)
+- c - efl (enlightenment)
+- c - motif
+- c - xlib / xcb
+- c - wayland (wlroots, layer shell)
+- go - gotk4
+- haskell - gi-gtk
+- swift - adwaita-swift
+- nim - owlkettle
+- blueprint (gtk ui language)
+- cambalache / glade
+- gnome shell extensions
+- kde plasma widgets (plasmoids)
+- ags / astal widgets
+- eww widgets
+- waybar modules
+- conky
+- rofi / wofi scripts
+
+## Cross-platform desktop GUI — 114
+
+- rust - iced
+- rust - egui / eframe
+- rust - slint
+- rust - dioxus desktop
+- rust - gpui (zed)
+- rust - xilem
+- rust - floem
+- rust - makepad
+- rust - fltk-rs
+- rust - azul
+- rust - vizia
+- rust - freya
+- rust - cushy
+- rust - kas
+- rust - ribir
+- rust - druid (legacy)
+- rust - conrod (legacy)
+- rust - winit + wgpu (custom)
+- go - fyne
+- go - gio
+- go - cogent core
+- go - giu
+- go - andlabs/ui
+- go - miqt (qt)
+- python - tkinter
+- python - customtkinter
+- python - ttkbootstrap
+- python - pyqt6
+- python - pyside6
+- python - kivy
+- python - kivymd
+- python - beeware toga
+- python - wxpython
+- python - dearpygui
+- python - pysimplegui / freesimplegui
+- python - flet
+- python - enaml
+- python - gooey
+- python - imgui-bundle
+- c++ - qt widgets
+- c++ - qt quick / qml
+- c++ - wxwidgets
+- c++ - fltk
+- c++ - nana
+- c++ - ultimate++
+- c++ - copperspice
+- c++ - elements
+- c++ - nanogui
+- c++ - sciter
+- c - iup
+- c - libui-ng
+- c# - avalonia
+- c# - .net maui
+- c# - uno platform
+- c# - eto.forms
+- c# - gir.core / gtksharp
+- c# - xamarin.forms (legacy)
+- java - javafx
+- java - swing
+- java - awt
+- java - swt
+- java - flatlaf
+- kotlin - compose multiplatform desktop
+- kotlin - tornadofx
+- scala - scalafx
+- dart - flutter desktop
+- js - react native macos
+- js - nodegui
+- js - react-nodegui
+- js - proton native
+- js - vuido
+- pascal - lazarus lcl
+- delphi - firemonkey (fmx)
+- xojo
+- livecode
+- purebasic gui
+- b4j (b4x)
+- red - view / vid
+- tcl - tk
+- racket - racket/gui
+- clojure - cljfx
+- clojure - seesaw
+- clojure - humbleui
+- haskell - monomer
+- haskell - threepenny-gui
+- ocaml - lablgtk
+- ocaml - bogue
+- reason - revery
+- elixir - scenic
+- elixir - elixir desktop
+- erlang - wx
+- nim - nimx
+- nim - nigui
+- nim - uing
+- zig - capy
+- zig - dvui
+- d - dlangui
+- d - gtkd
+- julia - gtk4.jl
+- crystal - gtk4.cr
+- v - v ui
+- lua - iuplua
+- lua - lgi
+- ruby - glimmer dsl
+- ruby - shoes
+- ruby - fxruby
+- perl - tk
+- perl - prima
+- haxe - haxeui
+- swift - swiftcrossui
+- common lisp - mcclim
+- common lisp - ltk
+- smalltalk - pharo spec2
+- smalltalk - glamorous toolkit
+
+## Immediate-mode and game-UI libraries — 17
+
+- c++ - dear imgui
+- c++ - implot
+- c++ - imnodes
+- c - nuklear
+- c - microui
+- c - raygui
+- c - clay (layout)
+- c++ - rmlui (html/css in games)
+- c++ - ultralight
+- c++ - noesisgui
+- c++ - coherent gameface
+- c++ - cegui
+- zig - zgui
+- python - pyimgui
+- go - imgui-go
+- java - imgui-java
+- c# - imgui.net
+
+## Electron and webview desktop wrappers — 37
+
+- electron
+- electron forge
+- electron-builder
+- electron-vite
+- electron-react-boilerplate
+- nextron (next.js + electron)
+- quasar electron mode
+- capacitor electron
+- tauri
+- wails (go)
+- neutralinojs
+- nw.js
+- electrobun (bun)
+- buntralino
+- cef (chromium embedded framework)
+- cefsharp
+- cefpython
+- webview/webview (c)
+- webview2 (windows)
+- wkwebview shell
+- pywebview
+- eel (python)
+- flaskwebgui
+- gluon
+- photino (.net)
+- electron.net
+- blazor hybrid
+- lorca (go)
+- go-astilectron
+- pake (website → app)
+- nativefier (legacy)
+- socket runtime
+- saucer (c++)
+- webui
+- deno webview
+- deskgap (legacy)
+- carlo (legacy)
+
+## Mobile native — 13
+
+- ios - swiftui
+- ios - uikit
+- ios - objective-c uikit (legacy)
+- ios - app clips
+- ios - imessage apps
+- android - kotlin jetpack compose
+- android - views / xml layouts
+- android - java sdk
+- android - ndk (c / c++)
+- android - jetpack (viewmodel, navigation, workmanager)
+- android - hilt / dagger
+- android - glance widgets
+- android - instant apps
+
+## Mobile cross-platform — 37
+
+- flutter (dart)
+- react native
+- expo
+- expo router
+- react native web
+- kotlin multiplatform
+- compose multiplatform ios
+- skip (swift → android)
+- swift for android
+- ionic
+- capacitor
+- cordova / phonegap
+- nativescript
+- xamarin native (legacy)
+- lynx (bytedance)
+- valdi (snap)
+- tamagui
+- framework7
+- onsen ui
+- quasar
+- titanium sdk
+- b4a / b4i
+- codename one
+- uni-app (vue)
+- taro (react)
+- hippy (tencent)
+- weex (legacy)
+- wechat mini programs
+- alipay mini programs
+- tauri mobile
+- dioxus mobile
+- gomobile
+- pwa (progressive web app)
+- trusted web activity
+- hotwire native
+- jquery mobile (legacy)
+- sencha touch (legacy)
+
+## Wearables, TV, car, XR — 32
+
+- watchos - swiftui
+- wear os - compose for wear os
+- tvos - swiftui / tvml
+- android tv - compose for tv / leanback
+- roku - scenegraph
+- samsung tizen web apps
+- lg webos
+- amazon fire tv (vega os)
+- apple carplay
+- android auto / automotive os
+- garmin connect iq
+- pebble sdk
+- zepp os
+- fitbit sdk (legacy)
+- trmnl plugins (e-ink)
+- visionos - swiftui + realitykit
+- meta quest - meta xr / spatial sdk
+- android xr (jetpack xr)
+- openxr
+- webxr
+- a-frame
+- react-three/xr
+- unity xr interaction toolkit
+- stereokit
+- lovr
+- arcore
+- 8th wall
+- niantic lightship
+- snap lens studio
+- tiktok effect house
+- needle engine
+- wonderland engine
+
+## Web frontend frameworks — 43
+
+- react
+- react server components
+- preact
+- vue
+- angular
+- angularjs (legacy)
+- svelte
+- solid
+- qwik
+- lit
+- stencil
+- ember
+- backbone
+- knockout
+- mithril
+- alpine.js
+- htmx
+- _hyperscript
+- petite-vue
+- inferno
+- marko
+- riot
+- aurelia
+- polymer (legacy)
+- dojo
+- ext js
+- jquery
+- jquery ui
+- mootools (legacy)
+- prototype.js (legacy)
+- yui (legacy)
+- hyperapp
+- choo
+- crank.js
+- van.js
+- arrow.js
+- million.js
+- stimulus
+- turbo (hotwire)
+- unpoly
+- datastar
+- web components (vanilla)
+- vanilla js + dom
+
+## Other languages compiled to the web — 55
+
+- rust - yew
+- rust - leptos
+- rust - dioxus web
+- rust - sycamore
+- rust - dominator
+- rust - sauron
+- rust - perseus
+- rust - seed (legacy)
+- go - go-app
+- go - vugu
+- go - vecty
+- kotlin - kvision
+- kotlin - compose html / compose wasm
+- dart - jaspr
+- dart - angulardart (legacy)
+- python - pyscript
+- python - pyodide
+- python - brython
+- python - transcrypt
+- python - reactpy
+- c# - blazor webassembly
+- c# - blazor server
+- f# - fable + elmish
+- f# - feliz
+- f# - bolero
+- scala.js - laminar
+- scala.js - tyrian
+- scala.js - slinky
+- clojurescript - reagent
+- clojurescript - re-frame
+- clojurescript - rum
+- clojurescript - helix
+- clojurescript - uix
+- clojurescript - replicant
+- haskell - miso
+- haskell - reflex-frp
+- purescript - halogen
+- purescript - react-basic
+- ocaml - js_of_ocaml
+- ocaml - melange
+- ocaml - bonsai
+- rescript - rescript-react
+- reason - reason-react
+- gleam - lustre
+- elixir - hologram
+- nim - karax
+- ruby - opal
+- swift - tokamak (legacy)
+- elm - browser apps
+- c / c++ - emscripten
+- c / c++ - wasi sdk
+- java - teavm
+- java - j2cl
+- java - gwt (legacy)
+- lua - fengari
+
+## State, data fetching, forms, routing — 37
+
+- redux / redux toolkit
+- zustand
+- jotai
+- recoil (legacy)
+- mobx
+- valtio
+- xstate
+- nanostores
+- preact signals
+- legend-state
+- effector
+- pinia
+- vuex (legacy)
+- ngrx
+- ngxs
+- tanstack query
+- swr
+- apollo client
+- relay
+- urql
+- tanstack router
+- react router
+- wouter
+- vue router
+- tanstack table
+- tanstack form
+- react hook form
+- formik
+- zod
+- valibot
+- effect (ts)
+- rxjs
+- immer
+- dart - riverpod
+- dart - bloc
+- dart - provider
+- dart - getx
+
+## Web meta-frameworks and static sites — 45
+
+- next.js
+- remix
+- react router v7 framework mode
+- tanstack start
+- gatsby
+- astro
+- nuxt
+- sveltekit
+- solidstart
+- qwik city
+- analog (angular)
+- angular ssr
+- redwood.js
+- blitz.js
+- create t3 app
+- waku
+- vike
+- rakkas
+- fresh (deno)
+- meteor
+- wasp
+- enhance
+- eleventy (11ty)
+- hugo
+- jekyll
+- zola
+- pelican
+- mkdocs material
+- docusaurus
+- vitepress
+- vuepress
+- hexo
+- lume
+- bridgetown
+- middleman
+- nextra
+- starlight
+- mdbook
+- sphinx
+- docsify
+- gitbook
+- mintlify
+- fumadocs
+- gridsome (legacy)
+- scully (legacy)
+
+## UI kits and CSS — 81
+
+- tailwind css
+- bootstrap
+- bulma
+- foundation
+- materialize
+- semantic ui / fomantic
+- uikit
+- pure.css
+- tachyons
+- unocss
+- windi css (legacy)
+- panda css
+- stylex
+- vanilla-extract
+- styled-components
+- emotion
+- stitches
+- linaria
+- css modules
+- sass / scss
+- less
+- stylus
+- postcss
+- open props
+- pico.css
+- water.css
+- simple.css
+- daisyui
+- flowbite
+- shadcn/ui
+- radix ui
+- headless ui
+- ark ui
+- react aria
+- base ui
+- mui (material ui)
+- joy ui
+- chakra ui
+- mantine
+- ant design
+- arco design
+- semi design
+- tdesign
+- fluent ui
+- carbon design system
+- adobe spectrum
+- evergreen
+- blueprint
+- grommet
+- primereact / primevue / primeng
+- vuetify
+- element plus
+- naive ui
+- vant
+- nuxt ui
+- angular material
+- ng-zorro
+- taiga ui
+- clarity
+- shoelace / web awesome
+- microsoft fast
+- material web
+- skeleton (svelte)
+- melt ui
+- bits ui
+- kobalte (solid)
+- park ui
+- heroui (nextui)
+- aceternity ui
+- magic ui
+- tremor
+- react bootstrap
+- reactstrap
+- rsuite
+- konsta ui
+- gluestack ui
+- nativebase
+- react native paper
+- nativewind
+- ui kitten
+- react native elements
+
+## Animation and motion — 20
+
+- motion (framer motion)
+- gsap
+- anime.js
+- react spring
+- lottie / dotlottie
+- rive
+- auto-animate
+- popmotion
+- mo.js
+- theatre.js
+- velocity.js (legacy)
+- view transitions api
+- web animations api
+- spline
+- react native reanimated
+- moti
+- lenis
+- barba.js
+- swup
+- aos (animate on scroll)
+
+## Web backend frameworks — 204
+
+- node - express
+- node - fastify
+- node - koa
+- node - hapi
+- node - nest.js
+- node - adonisjs
+- node - sails.js
+- node - loopback
+- node - feathers
+- node - restify
+- node - hono
+- node - h3 / nitro
+- node - polka
+- node - trpc
+- node - apollo server
+- node - graphql yoga
+- node - total.js
+- node - marble.js
+- node - encore.ts
+- node - moleculer
+- bun - elysia
+- deno - oak
+- python - django
+- python - django rest framework
+- python - django ninja
+- python - flask
+- python - fastapi
+- python - starlette
+- python - litestar
+- python - sanic
+- python - aiohttp
+- python - tornado
+- python - pyramid
+- python - bottle
+- python - falcon
+- python - quart
+- python - cherrypy
+- python - web2py
+- python - masonite
+- python - emmett
+- python - robyn
+- python - blacksheep
+- ruby - rails
+- ruby - sinatra
+- ruby - hanami
+- ruby - roda
+- ruby - grape
+- ruby - padrino
+- ruby - cuba
+- ruby - rack
+- php - laravel
+- php - symfony
+- php - slim
+- php - codeigniter
+- php - cakephp
+- php - yii
+- php - laminas
+- php - phalcon
+- php - lumen
+- php - livewire
+- php - filament
+- inertia.js
+- go - net/http
+- go - gin
+- go - echo
+- go - fiber
+- go - chi
+- go - gorilla mux
+- go - beego
+- go - revel
+- go - buffalo
+- go - iris
+- go - gofr
+- go - encore
+- go - goa
+- go - kratos
+- go - go-zero
+- go - hertz
+- go - templ
+- rust - axum
+- rust - actix-web
+- rust - rocket
+- rust - warp
+- rust - poem
+- rust - tide
+- rust - salvo
+- rust - loco.rs
+- rust - pavex
+- rust - ntex
+- rust - tower
+- rust - tonic (grpc)
+- java - spring boot
+- java - spring webflux
+- java - quarkus
+- java - micronaut
+- java - helidon
+- java - jakarta ee
+- java - dropwizard
+- java - vert.x
+- java - javalin
+- java - spark java
+- java - play framework
+- java - struts (legacy)
+- java - jsf
+- java - vaadin
+- java - wicket
+- java - ratpack
+- java - jooby
+- java - blade
+- groovy - grails
+- kotlin - ktor
+- kotlin - http4k
+- scala - pekko http / akka http
+- scala - http4s
+- scala - zio http
+- scala - tapir
+- scala - finatra
+- scala - cask
+- scala - lift
+- scala - scalatra
+- c# - asp.net core
+- c# - minimal apis
+- c# - razor pages
+- c# - asp.net mvc
+- c# - nancyfx (legacy)
+- c# - servicestack
+- c# - carter
+- c# - fastendpoints
+- c# - orleans
+- c# - abp framework
+- elixir - phoenix
+- elixir - phoenix liveview
+- elixir - surface
+- elixir - plug
+- elixir - ash framework
+- erlang - cowboy
+- erlang - nitrogen
+- erlang - chicago boss
+- gleam - wisp
+- gleam - mist
+- haskell - yesod
+- haskell - servant
+- haskell - scotty
+- haskell - ihp
+- haskell - snap
+- haskell - spock
+- ocaml - dream
+- ocaml - opium
+- f# - giraffe
+- f# - saturn
+- f# - falco
+- f# - suave
+- f# - websharper
+- clojure - ring
+- clojure - compojure
+- clojure - reitit
+- clojure - pedestal
+- clojure - luminus
+- clojure - kit
+- clojure - biff
+- clojure - duct
+- clojure - fulcro
+- crystal - kemal
+- crystal - lucky
+- crystal - amber
+- crystal - athena
+- crystal - marten
+- nim - jester
+- nim - prologue
+- nim - happyx
+- zig - zap
+- zig - http.zig
+- zig - jetzig
+- zig - tokamak
+- dart - shelf
+- dart - dart frog
+- dart - serverpod
+- swift - vapor
+- swift - hummingbird
+- swift - kitura (legacy)
+- perl - mojolicious
+- perl - dancer2
+- perl - catalyst
+- lua - openresty
+- lua - lapis
+- julia - genie
+- r - shiny
+- r - plumber
+- c++ - drogon
+- c++ - crow
+- c++ - oat++
+- c++ - pistache
+- c++ - cpp-httplib
+- c++ - wt
+- c++ - cppcms
+- c++ - userver
+- c++ - boost.beast
+- c - civetweb
+- c - mongoose
+- c - kore
+- c - facil.io
+- c - libmicrohttpd
+- v - veb
+- d - vibe.d
+
+## Python data and internal-app frameworks — 15
+
+- python - streamlit
+- python - gradio
+- python - dash (plotly)
+- python - panel (holoviz)
+- python - shiny for python
+- python - nicegui
+- python - solara
+- python - mesop
+- python - fasthtml
+- python - reflex
+- python - anvil
+- python - taipy
+- python - h2o wave
+- python - rio
+- python - remi
+
+## Backend-as-a-service and sync engines — 25
+
+- firebase
+- supabase
+- appwrite
+- pocketbase
+- parse server
+- nhost
+- convex
+- instantdb
+- triplit
+- jazz
+- electricsql
+- zero (rocicorp)
+- replicache
+- powersync
+- liveblocks
+- partykit
+- cloudflare durable objects
+- aws amplify
+- hasura
+- postgraphile
+- postgrest
+- trailbase
+- ditto
+- tinybase
+- livestore
+
+## CMS and e-commerce — 34
+
+- wordpress
+- drupal
+- joomla
+- ghost
+- strapi
+- directus
+- payload cms
+- sanity
+- contentful
+- storyblok
+- keystone
+- tina cms
+- decap cms
+- prismic
+- hygraph
+- craft cms
+- statamic
+- october cms
+- umbraco
+- wagtail
+- django cms
+- kirby
+- grav
+- outstatic
+- keystatic
+- shopify (liquid themes / hydrogen)
+- woocommerce
+- magento
+- medusa
+- saleor
+- vendure
+- prestashop
+- solidus
+- spree
+
+## ORMs and database access — 36
+
+- prisma
+- drizzle
+- typeorm
+- sequelize
+- kysely
+- mikro-orm
+- knex
+- python - sqlalchemy
+- python - sqlmodel
+- python - peewee
+- python - tortoise orm
+- python - django orm
+- ruby - active record
+- ruby - sequel
+- php - eloquent
+- php - doctrine
+- go - gorm
+- go - ent
+- go - sqlc
+- go - sqlx
+- rust - sqlx
+- rust - diesel
+- rust - sea-orm
+- java - hibernate
+- java - jooq
+- java - mybatis
+- kotlin - exposed
+- c# - entity framework core
+- c# - dapper
+- elixir - ecto
+- android - room
+- kotlin - sqldelight
+- swift - grdb
+- dart - drift
+- dart - isar
+- react native - watermelondb
+
+## Databases and storage — 71
+
+- postgresql
+- mysql
+- mariadb
+- sqlite
+- libsql / turso
+- duckdb
+- pglite
+- oracle database
+- sql server
+- mongodb
+- redis
+- valkey
+- dragonfly
+- cassandra
+- scylladb
+- couchdb
+- pouchdb
+- couchbase
+- rethinkdb
+- neo4j
+- arangodb
+- surrealdb
+- gel (edgedb)
+- cockroachdb
+- tidb
+- yugabytedb
+- planetscale
+- neon
+- cloudflare d1
+- cloudflare kv
+- firestore
+- firebase realtime database
+- dynamodb
+- cosmos db
+- clickhouse
+- timescaledb
+- influxdb
+- questdb
+- elasticsearch
+- opensearch
+- meilisearch
+- typesense
+- algolia
+- qdrant
+- weaviate
+- pinecone
+- chroma
+- milvus
+- lancedb
+- pgvector
+- xtdb
+- datomic
+- datascript
+- realm / atlas device sync (legacy)
+- objectbox
+- dart - hive
+- dexie.js (indexeddb)
+- localforage
+- mmkv
+- leveldb
+- rocksdb
+- lmdb
+- sled
+- redb
+- foundationdb
+- tigerbeetle
+- etcd
+- minio
+- aws s3
+- cloudflare r2
+- backblaze b2
+
+## Realtime, APIs, messaging, sync — 45
+
+- rest
+- graphql
+- grpc
+- connect rpc
+- json-rpc
+- openapi / swagger
+- protobuf
+- cap'n proto
+- flatbuffers
+- msgpack
+- websockets
+- node - ws
+- uwebsockets
+- socket.io
+- soketi
+- server-sent events
+- webtransport
+- webrtc
+- livekit
+- mediasoup
+- jitsi
+- agora
+- twilio
+- signalr
+- phoenix channels
+- pusher
+- ably
+- centrifugo
+- mqtt
+- nats
+- kafka
+- redpanda
+- rabbitmq
+- zeromq
+- redis streams
+- yjs
+- hocuspocus
+- automerge
+- loro
+- iroh
+- libp2p
+- holepunch / pear
+- nostr
+- at protocol (bluesky)
+- activitypub
+
+## Graphics APIs and rendering — 38
+
+- opengl
+- opengl es
+- webgl
+- webgpu
+- vulkan
+- metal
+- directx 12
+- directx 11
+- wgpu
+- dawn
+- bgfx
+- glfw
+- filament
+- the forge
+- diligent engine
+- ogre / ogre-next
+- magnum
+- skia
+- impeller (flutter)
+- cairo
+- blend2d
+- nanovg
+- vello
+- femtovg
+- tiny-skia
+- canvas 2d
+- svg
+- three.js
+- react three fiber
+- drei
+- threlte (svelte)
+- tresjs (vue)
+- babylon.js
+- regl
+- twgl
+- ogl
+- openusd
+- blender python (bpy) addons
+
+## Creative coding, charts, diagrams — 56
+
+- p5.js
+- processing
+- openframeworks
+- cinder
+- nannou (rust)
+- touchdesigner
+- vvvv
+- notch
+- hydra (live visuals)
+- shadertoy
+- manim
+- motion canvas
+- remotion
+- revideo
+- d3.js
+- observable plot
+- vega / vega-lite
+- chart.js
+- echarts
+- highcharts
+- plotly
+- recharts
+- nivo
+- visx
+- victory
+- apexcharts
+- amcharts
+- uplot
+- lightweight charts (tradingview)
+- cytoscape.js
+- sigma.js
+- vis-network
+- react flow (xyflow)
+- jointjs
+- gojs
+- antv g6 / x6
+- mermaid
+- graphviz
+- excalidraw
+- tldraw sdk
+- konva
+- fabric.js
+- paper.js
+- two.js
+- zdog
+- rough.js
+- python - matplotlib
+- python - seaborn
+- python - bokeh
+- python - altair
+- python - holoviews
+- python - pyqtgraph
+- python - vispy
+- julia - makie
+- r - ggplot2
+- rust - plotters
+
+## Maps — 14
+
+- mapbox gl js
+- maplibre gl
+- leaflet
+- openlayers
+- cesium
+- deck.gl
+- kepler.gl
+- google maps sdk
+- apple mapkit js
+- arcgis maps sdk
+- protomaps
+- turf.js
+- python - folium
+- python - pydeck
+
+## Audio and music — 35
+
+- c++ - juce
+- web audio api
+- tone.js
+- howler.js
+- supercollider
+- sonic pi
+- strudel
+- tidalcycles
+- glicol
+- faust
+- csound
+- chuck
+- max/msp
+- max for live
+- pure data
+- vcv rack plugins
+- vst3 sdk
+- clap (audio plugin format)
+- audio units (auv3)
+- rust - nih-plug
+- c++ - iplug2
+- c++ - dpf (distrho)
+- swift - audiokit
+- superpowered
+- cmajor
+- elementary audio (js)
+- fmod
+- wwise
+- openal
+- miniaudio
+- portaudio
+- rtaudio
+- rust - kira
+- rust - cpal / rodio
+- reaper reascript
+
+## Embedded, IoT, robotics — 36
+
+- arduino
+- platformio
+- esp-idf
+- micropython
+- circuitpython
+- nodemcu
+- espruino
+- moddable sdk
+- devicescript (legacy)
+- toit sdk
+- freertos
+- zephyr
+- nuttx
+- riot os
+- mbed (legacy)
+- raspberry pi pico sdk
+- rust - embassy
+- rust - rtic
+- go - tinygo
+- elixir - nerves
+- c - lvgl
+- qt for mcus
+- touchgfx
+- embedded wizard
+- crank storyboard
+- balena
+- yocto
+- buildroot
+- esphome
+- tasmota
+- home assistant integrations
+- matter sdk
+- flipper zero apps
+- m5stack uiflow
+- ros 2
+- px4 / ardupilot
+
+## Bots and messengers — 39
+
+- python - aiogram
+- python - botspot (aiogram-based)
+- python - python-telegram-bot
+- python - pyrogram / kurigram
+- python - telethon
+- ts - grammy
+- js - telegraf
+- go - telebot
+- rust - teloxide
+- c++ - tdlib
+- telegram mini apps
+- js - discord.js
+- python - discord.py
+- python - pycord
+- python - hikari
+- rust - serenity / poise
+- go - discordgo
+- java - jda
+- c# - discord.net
+- discord activities (embedded app sdk)
+- slack bolt
+- slack block kit
+- whatsapp cloud api
+- js - whatsapp-web.js
+- js - baileys
+- python - matrix-nio
+- go - mautrix
+- signal-cli
+- twitch - tmi.js / eventsub
+- microsoft teams ai library / bot framework
+- line messaging api
+- viber bot api
+- vk api bots
+- botpress
+- rasa
+- dialogflow
+- voiceflow
+- typebot
+- alexa skills kit
+
+## Browser extensions and app plugins — 34
+
+- chrome extensions (manifest v3)
+- firefox webextensions
+- plasmo
+- wxt
+- crxjs
+- extension.js
+- userscripts (tampermonkey / violentmonkey)
+- bookmarklets
+- obsidian plugins
+- logseq plugins
+- notion api integrations
+- figma plugins
+- penpot plugins
+- sketch plugins
+- adobe uxp plugins
+- google apps script
+- google workspace add-ons
+- office add-ins (office.js)
+- excel vba
+- coda packs
+- airtable extensions
+- shopify apps
+- wordpress plugins
+- atlassian forge apps
+- github apps
+- github actions
+- chatgpt apps (apps sdk)
+- custom gpts
+- mcp servers
+- claude skills
+- claude code plugins / hooks
+- stream deck plugins
+- obs plugins / browser sources
+- anki add-ons
+
+## AI and LLM app frameworks — 36
+
+- langchain
+- langgraph
+- llamaindex
+- haystack
+- semantic kernel
+- autogen
+- crewai
+- pydantic ai
+- openai agents sdk
+- claude agent sdk
+- google adk
+- strands agents
+- vercel ai sdk
+- mastra
+- smolagents
+- agno
+- letta
+- beeai
+- camel
+- metagpt
+- dspy
+- instructor
+- outlines
+- guidance
+- baml
+- marvin
+- flowise
+- langflow
+- dify
+- chainlit
+- open webui
+- livekit agents
+- pipecat
+- vapi
+- retell
+- openai realtime api
+
+## Local AI and on-device ML — 27
+
+- ollama
+- llama.cpp
+- llamafile
+- lm studio sdk
+- mlx / mlx-swift
+- mlc llm
+- webllm
+- vllm
+- sglang
+- pytorch
+- jax
+- tinygrad
+- rust - candle
+- rust - burn
+- python - transformers
+- transformers.js
+- python - diffusers
+- onnx runtime
+- tensorflow.js
+- litert (tensorflow lite)
+- mediapipe
+- executorch
+- whisper.cpp
+- comfyui custom nodes
+- replicate cog
+- bentoml
+- ray serve
+
+## AI coding agents — 12
+
+- claude code
+- codex cli
+- gemini cli
+- cursor
+- windsurf
+- aider
+- cline
+- opencode
+- amp
+- github copilot agent
+- jules
+- devin
+
+## AI app builders — 16
+
+- v0
+- bolt.new
+- lovable
+- replit agent
+- base44
+- firebase studio
+- google ai studio build
+- claude artifacts
+- chatgpt canvas
+- github spark
+- rork (mobile)
+- a0.dev (mobile)
+- anything (create.xyz)
+- tempo labs
+- magic patterns
+- same.dev
+
+## No-code and low-code — 46
+
+- bubble
+- webflow
+- framer
+- wix / wix studio
+- squarespace
+- tilda
+- readymag
+- carrd
+- super.so (notion sites)
+- softr
+- glide
+- adalo
+- flutterflow
+- draftbit
+- thunkable
+- appsheet
+- power apps
+- retool
+- appsmith
+- budibase
+- tooljet
+- lowcoder
+- illa builder
+- refine
+- react-admin
+- forest admin
+- outsystems
+- mendix
+- zoho creator
+- appian
+- airtable interfaces
+- plasmic
+- builder.io
+- teleporthq
+- anima
+- locofy
+- weweb
+- xano
+- backendless
+- noloco
+- nordcraft (toddle)
+- uizard
+- sap build apps (appgyver)
+- jotform apps
+- tally
+- typeform
+
+## Automation, workflows, jobs — 21
+
+- n8n
+- zapier
+- make (ex-integromat)
+- pipedream
+- windmill
+- activepieces
+- node-red
+- ifttt
+- huginn
+- temporal
+- inngest
+- trigger.dev
+- hatchet
+- kestra
+- prefect
+- airflow
+- dagster
+- celery
+- rq
+- bullmq
+- sidekiq
+
+## Notebooks and spreadsheets as apps — 21
+
+- jupyter / jupyterlab
+- ipywidgets
+- voila
+- marimo
+- observable notebooks
+- observable framework
+- quarto
+- evidence.dev
+- hex (data notebooks)
+- deepnote
+- google colab
+- pluto.jl
+- livebook (elixir)
+- clerk (clojure)
+- excel (lambda, power query)
+- python in excel
+- google sheets
+- airtable
+- grist
+- nocodb
+- baserow
+
+## Runtimes and VMs — 25
+
+- node.js
+- deno
+- bun
+- workerd (cloudflare)
+- llrt
+- quickjs
+- hermes
+- v8
+- javascriptcore
+- graalvm
+- openjdk jvm
+- .net runtime
+- mono
+- beam (erlang vm)
+- cpython
+- pypy
+- jruby
+- truffleruby
+- wasmtime
+- wasmer
+- wasmedge
+- wamr
+- extism
+- spin (fermyon)
+- wasmcloud
+
+## Build tools and bundlers — 49
+
+- vite
+- webpack
+- rollup
+- rolldown
+- esbuild
+- swc
+- babel
+- parcel
+- turbopack
+- rspack
+- rsbuild
+- farm
+- tsup
+- tsdown
+- unbuild
+- shadow-cljs
+- browserify (legacy)
+- gulp
+- grunt (legacy)
+- snowpack (legacy)
+- bazel
+- buck2
+- pants
+- cmake
+- meson
+- ninja
+- make
+- just
+- taskfile
+- xmake
+- premake
+- scons
+- gradle
+- maven
+- sbt
+- mill
+- leiningen
+- clojure cli (deps.edn)
+- mix
+- rebar3
+- cabal / stack
+- dune / opam
+- cargo
+- zig build
+- nimble
+- shards
+- dub
+- dotnet cli / msbuild
+- xcodebuild
+
+## Package managers, environments, monorepos — 32
+
+- npm
+- pnpm
+- yarn
+- jsr
+- uv
+- pip
+- poetry
+- pdm
+- hatch
+- rye (legacy)
+- conda / mamba
+- pixi
+- cocoapods
+- carthage (legacy)
+- go modules
+- composer
+- bundler / rubygems
+- nuget
+- vcpkg
+- conan
+- hex (elixir)
+- pub (dart)
+- homebrew
+- nix
+- devbox
+- mise
+- asdf
+- nx
+- turborepo
+- lerna
+- moon
+- rush
+
+## Packaging and installers — 32
+
+- pyinstaller
+- nuitka
+- briefcase
+- cx_freeze
+- pex
+- shiv
+- pyoxidizer
+- pkg (vercel, legacy)
+- nexe
+- node single executable applications
+- deno compile
+- bun build --compile
+- goreleaser
+- cargo-dist
+- jpackage
+- graalvm native image
+- conveyor (hydraulic)
+- appimage
+- flatpak
+- snap (snapcraft)
+- deb / rpm (fpm)
+- msix
+- wix toolset
+- nsis
+- inno setup
+- create-dmg
+- pkgbuild / productbuild
+- squirrel.windows
+- velopack
+- docker
+- podman
+- devcontainers
+
+## Hosting and deploy — 52
+
+- vercel
+- netlify
+- cloudflare pages
+- cloudflare workers
+- cloudflare tunnel
+- fly.io
+- railway
+- render
+- heroku
+- coolify
+- dokploy
+- dokku
+- caprover
+- kamal
+- aws lambda
+- aws amplify hosting
+- aws ecs / fargate
+- aws app runner
+- aws ec2
+- google cloud run
+- google app engine
+- firebase hosting
+- azure app service
+- azure static web apps
+- azure functions
+- digitalocean app platform
+- hetzner
+- koyeb
+- northflank
+- zeabur
+- deno deploy
+- val town
+- replit deployments
+- glitch (legacy)
+- github pages
+- gitlab pages
+- surge
+- huggingface spaces
+- modal
+- sst
+- serverless framework
+- pulumi
+- terraform
+- opentofu
+- aws cdk
+- ansible
+- kubernetes
+- nixos
+- systemd services
+- launchd (macos)
+- tailscale serve / funnel
+- ngrok
+
+## Stores, distribution, CI — 29
+
+- apple app store
+- mac app store
+- testflight
+- google play
+- f-droid
+- huawei appgallery
+- microsoft store
+- setapp
+- steam (steamworks)
+- itch.io
+- epic games store
+- gog
+- xbox gdk
+- playstation sdk
+- nintendo switch sdk
+- meta horizon store
+- chrome web store
+- firefox add-ons (amo)
+- vs code marketplace / open vsx
+- fastlane
+- expo eas
+- codemagic
+- bitrise
+- xcode cloud
+- firebase app distribution
+- gitlab ci
+- circleci
+- buildkite
+- dagger
+
+## Auth, payments, analytics, messaging services — 53
+
+- auth0
+- clerk
+- better auth
+- auth.js (next-auth)
+- lucia (legacy)
+- keycloak
+- ory
+- workos
+- stytch
+- passport.js
+- zitadel
+- authentik
+- logto
+- supertokens
+- kinde
+- passkeys / webauthn
+- sign in with apple
+- stripe
+- paddle
+- lemon squeezy
+- polar
+- revenuecat
+- superwall
+- google play billing
+- gumroad
+- paypal / braintree
+- posthog
+- mixpanel
+- amplitude
+- plausible
+- umami
+- google analytics
+- sentry
+- datadog
+- grafana
+- prometheus
+- opentelemetry
+- betterstack
+- healthchecks.io
+- uptime kuma
+- launchdarkly
+- growthbook
+- statsig
+- resend
+- postmark
+- sendgrid
+- onesignal
+- firebase cloud messaging
+- apns
+- novu
+- cloudinary
+- uploadthing
+- mux
+
+## Testing — 36
+
+- jest
+- vitest
+- mocha
+- bun test
+- deno test
+- playwright
+- cypress
+- puppeteer
+- selenium
+- webdriverio
+- testing library
+- storybook
+- chromatic
+- msw
+- python - pytest
+- python - unittest
+- python - hypothesis
+- ruby - rspec
+- ruby - minitest
+- php - phpunit
+- php - pest
+- java - junit
+- kotlin - kotest
+- c# - xunit / nunit
+- swift - xctest
+- swift - swift testing
+- android - espresso
+- ios - xcuitest
+- react native - detox
+- maestro
+- appium
+- rust - cargo test / nextest
+- go - go test / testify
+- go - ginkgo
+- k6
+- locust
+
+## Legacy and dead platforms (still possible) — 27
+
+- adobe flash / actionscript 3
+- adobe air
+- adobe flex
+- ruffle (flash player)
+- microsoft silverlight
+- java applets
+- java web start
+- activex
+- adobe director / shockwave
+- unity web player
+- hypercard
+- visual foxpro
+- powerbuilder
+- c++builder (borland / embarcadero)
+- lotus notes
+- ms access
+- filemaker
+- symbian (s60 / qt)
+- j2me (midp)
+- blackberry os
+- windows phone
+- palm os
+- firefox os
+- kaios
+- sailfish os
+- ubuntu touch
+- dashboard widgets (macos)

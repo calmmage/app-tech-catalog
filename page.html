@@ -1,0 +1,309 @@
+<title>App Tech Catalog</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Parts catalog: sticky search bar, four tabbed views, dense multi-column lists */
+:root {
+  --bg: #F3F4F7; --surface: #FFFFFF; --ink: #14171C; --muted: #59626F;
+  --line: #D9DEE6; --accent: #2A4FC6; --accent-soft: #E2E8FA; --pop: #C9821F; --mark: #FBE3B8;
+  --f-display: "Bricolage Grotesque", "IBM Plex Sans", system-ui, sans-serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1115; --surface: #161A21; --ink: #E5E8EE; --muted: #98A1AF;
+    --line: #283039; --accent: #8DA6FF; --accent-soft: #1D2643; --pop: #E5A74A; --mark: #5A4316;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1115; --surface: #161A21; --ink: #E5E8EE; --muted: #98A1AF;
+  --line: #283039; --accent: #8DA6FF; --accent-soft: #1D2643; --pop: #E5A74A; --mark: #5A4316;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font: 15px/1.45 var(--f-body); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+a { color: var(--accent); }
+.wrap { max-width: 1280px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); }
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; padding-block: 12px 6px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font: 800 21px/1 var(--f-display); letter-spacing: -0.01em; }
+.brand svg { width: 28px; height: 28px; flex: none; }
+.px-a { fill: var(--accent); } .px-s { fill: var(--surface); } .px-i { fill: var(--ink); } .px-m { fill: var(--muted); } .px-p { fill: var(--pop); }
+.search { flex: 1 1 260px; min-width: 0; }
+#q { box-sizing: border-box; width: 100%; font: inherit; padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); }
+#q:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.tabs a { white-space: nowrap; padding: 8px 12px 9px; color: var(--muted); text-decoration: none; border-bottom: 2px solid transparent; font-weight: 500; }
+.tabs a b { font: 500 12px var(--f-mono); margin-left: 5px; }
+.tabs a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+main { padding-block: 18px 48px; }
+.lede { max-width: 70ch; margin: 0 0 4px; color: var(--muted); }
+.lede strong { color: var(--ink); font-weight: 600; }
+#status { min-height: 1.4em; margin: 0 0 8px; font: 12px var(--f-mono); color: var(--muted); }
+h2 { font: 700 22px/1.2 var(--f-display); margin: 26px 0 12px; text-wrap: balance; letter-spacing: -0.005em; }
+.meta { font: 500 12px var(--f-mono); color: var(--muted); margin-left: 8px; letter-spacing: 0.02em; white-space: nowrap; }
+.cats { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 18px; align-items: start; }
+.cat { padding: 12px 14px 13px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+.cat h3 { display: flex; align-items: baseline; gap: 8px; margin: 0 0 8px; font: 600 15px/1.3 var(--f-body); }
+.num { font: 500 12px var(--f-mono); color: var(--accent); min-width: 2.2em; }
+.ct { flex: 1; min-width: 0; }
+.tags { display: flex; gap: 3px; }
+.tags i { font: 500 10px/1 var(--f-mono); font-style: normal; padding: 3px 4px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); cursor: help; }
+.cat ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.cat li, .items li { font-size: 14px; line-height: 1.38; overflow-wrap: anywhere; }
+.cat li b, .items li b { font-weight: 600; }
+.cat li span, .items li span.n { color: var(--muted); }
+a.out { text-decoration: none; margin-left: 3px; }
+.items { list-style: none; margin: 0 0 4px; padding: 0; columns: 250px; column-gap: 26px; }
+.items li { break-inside: avoid; padding: 3px 0; }
+.grp h3 { font: 500 11.5px/1.2 var(--f-mono); text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); margin: 14px 0 6px; }
+.src { margin-left: 5px; white-space: nowrap; }
+.src i { font: 500 10px/1 var(--f-mono); font-style: normal; display: inline-block; padding: 2px 3px; margin-right: 2px; border-radius: 3px; background: var(--accent-soft); color: var(--accent); vertical-align: 1px; }
+.tech { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
+.secnav { display: none; }
+@media (min-width: 1000px) {
+  .tech { grid-template-columns: 220px minmax(0, 1fr); }
+  .secnav { display: block; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 108px); align-self: start; max-height: calc(100vh - 128px); overflow: auto; padding-top: 26px; }
+}
+.secnav a { display: flex; justify-content: space-between; gap: 8px; padding: 3px 0; color: var(--muted); text-decoration: none; font-size: 13px; }
+.secnav a:hover { color: var(--ink); }
+.secnav a span { font: 12px var(--f-mono); }
+.letter { font: 700 15px var(--f-mono); color: var(--accent); margin: 22px 0 6px; }
+code { font: 0.9em var(--f-mono); background: var(--accent-soft); padding: 0 3px; border-radius: 3px; }
+.story { max-width: 70ch; }
+.story h2:first-child { margin-top: 8px; }
+.story blockquote { margin: 10px 0; padding: 10px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; white-space: pre-wrap; font: 13.5px/1.5 var(--f-mono); }
+.story p { margin: 8px 0; }
+.facts { overflow-x: auto; margin: 12px 0; }
+.facts table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; }
+.facts th, .facts td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.facts th { font: 500 11.5px var(--f-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.facts td:first-child { white-space: nowrap; }
+.facts td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lens { display: flex; flex-wrap: wrap; gap: 6px 14px; color: var(--muted); font-size: 13px; margin: 6px 0 0; }
+.lens i { font: 500 10px/1 var(--f-mono); font-style: normal; padding: 3px 4px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 4px; }
+mark { background: var(--mark); color: inherit; border-radius: 2px; padding: 0 1px; }
+#empty { color: var(--muted); padding: 24px 0; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; padding-block: 16px 28px; }
+@media (prefers-reduced-motion: no-preference) { .tabs a { transition: color .15s, border-color .15s; } }
+</style>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#types" aria-label="App Tech Catalog, app types">
+      <svg viewBox="0 0 12 12" shape-rendering="crispEdges" aria-hidden="true">
+        <rect class="px-a" width="12" height="12"/>
+        <rect class="px-s" x="1" y="1" width="1" height="1"/><rect class="px-s" x="3" y="1" width="1" height="1"/><rect class="px-p" x="5" y="1" width="1" height="1"/>
+        <rect class="px-s" x="1" y="3" width="10" height="8"/>
+        <rect class="px-a" x="2" y="4" width="3" height="3"/><rect class="px-i" x="6" y="4" width="4" height="1"/><rect class="px-m" x="6" y="6" width="3" height="1"/>
+        <rect class="px-p" x="2" y="8" width="3" height="2"/><rect class="px-i" x="6" y="8" width="4" height="1"/><rect class="px-m" x="6" y="10" width="2" height="1"/>
+      </svg>
+      <span>App Tech Catalog</span>
+    </a>
+    <label class="search"><span hidden>Search</span><input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search {{names}} names, e.g. tauri, notch, tui   ( / )"></label>
+  </div>
+  <nav class="wrap tabs" aria-label="Views">
+    <a href="#types" data-view="types">App types <b>{{types}}</b></a>
+    <a href="#tech" data-view="tech">Frameworks <b>{{a2}}</b></a>
+    <a href="#names" data-view="names">All names <b>{{names}}</b></a>
+    <a href="#story" data-view="story">How it was made</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <p class="lede" id="lede"></p>
+  <p id="status" aria-live="polite"></p>
+  <section id="v-types"></section>
+  <section id="v-tech" hidden></section>
+  <section id="v-names" hidden></section>
+  <section id="v-story" hidden></section>
+  <p id="empty" hidden>Nothing matches. Try a shorter word, or the All names tab.</p>
+</main>
+<footer><div class="wrap">Four lists made on 6 Nov 2026 with Claude Code. Source files: <a href="lists/a3-app-types.md" target="_blank" rel="noopener">Markdown lists</a> · <a id="repo" href="#" target="_blank" rel="noopener">GitHub</a>.</div></footer>
+
+<script>
+const D = /*DATA*/null;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => r.querySelectorAll(s);
+const ESC = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
+const esc = s => String(s).replace(/[&<>"']/g, c => ESC[c]);
+const md = s => esc(s)
+  .replace(/`([^`]+)`/g, "<code>$1</code>")
+  .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+const LENS = { S: "structured", C: "community", W: "wild internet", I: "Instagram saves", N: "Petr's notes" };
+const SRC = { 0: "direct list", 1: "list from Petr's words", 2: "spec list", 3: "app types" };
+const VIEWS = ["types", "tech", "names", "story"];
+const LEDE = {
+  types: "<strong>What the app can be</strong> before what to build it with: 128 types of app, each with 3–5 picks running from the plain default to the odd one. Tags show which lens found the type.",
+  tech: "<strong>Every framework, language and engine</strong>, by section: 2,265 names from the spec list, checked with web searches on 6 Nov 2026.",
+  names: "<strong>All four lists merged</strong> into one A–Z index. Digits after a name show which lists have it: 0 direct, 1 Petr's words, 2 spec, 3 app types.",
+  story: "",
+};
+const rendered = {};
+const num = n => n.toLocaleString("en-US");
+const pick = (n, note) => `<b>${md(n)}</b>${note ? ` <span class="n">${md(note)}</span>` : ""}`;
+
+function renderTypes() {
+  let h = "";
+  D.a3.forEach(b => {
+    const picks = b.cats.reduce((n, c) => n + c.picks.length, 0);
+    h += `<section class="sec batch"><h2>${esc(b.title.replace(/^Batch \d+ — /, ""))}<span class="meta">${b.cats.length} types · ${picks} picks</span></h2><div class="cats">`;
+    b.cats.forEach(c => {
+      h += `<article class="cat"><h3><span class="num">${c.n}</span><span class="ct">${esc(c.title)}</span><span class="tags">${c.tags.map(t => `<i title="${esc(LENS[t] || t)}">${t}</i>`).join("")}</span></h3><ul>`;
+      c.picks.forEach(([n, note, link]) => {
+        h += `<li>${pick(n, note)}${link ? `<a class="out" href="${esc(link)}" target="_blank" rel="noopener" aria-label="Open ${esc(n)}">↗</a>` : ""}</li>`;
+      });
+      h += "</ul></article>";
+    });
+    h += "</div></section>";
+  });
+  h += `<p class="lens">${Object.entries(LENS).map(([k, v]) => `<span><i>${k}</i>${esc(v)}</span>`).join("")}</p>`;
+  $("#v-types").innerHTML = h;
+}
+
+function renderTech() {
+  let nav = "", h = "";
+  D.a2.forEach((s, i) => {
+    const n = s.groups.reduce((a, g) => a + g.items.length, 0);
+    nav += `<a href="#tech" data-sec="s${i}">${esc(s.title)}<span>${n}</span></a>`;
+    h += `<section class="sec" id="s${i}"><h2>${esc(s.title)}<span class="meta">${n}</span></h2>`;
+    s.groups.forEach(g => {
+      h += `<div class="grp">${g.title ? `<h3>${esc(g.title)}</h3>` : ""}<ul class="items">${g.items.map(([n, note]) => `<li>${pick(n, note)}</li>`).join("")}</ul></div>`;
+    });
+    h += "</section>";
+  });
+  $("#v-tech").innerHTML = `<div class="tech"><nav class="secnav" aria-label="Sections">${nav}</nav><div>${h}</div></div>`;
+  $$(".secnav a").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault();
+    document.getElementById(a.dataset.sec).scrollIntoView({ block: "start" });
+  }));
+}
+
+function renderNames() {
+  const groups = {};
+  D.names.forEach(r => {
+    const ch = (r[0].replace(/^[^A-Za-z0-9]+/, "")[0] || "#").toUpperCase();
+    (groups[/[A-Z]/.test(ch) ? ch : "#"] ||= []).push(r);
+  });
+  let h = "";
+  Object.keys(groups).sort().forEach(k => {
+    h += `<section class="sec"><div class="grp"><p class="letter">${k}</p><ul class="items">`;
+    groups[k].forEach(([n, note, src, where]) => {
+      const tip = `${src.split("").map(s => SRC[s]).join(", ")} · ${where}`;
+      h += `<li title="${esc(tip)}"><b>${md(n)}</b><span class="src" aria-label="in lists ${src.split("").join(", ")}">${src.split("").map(x => `<i>${x}</i>`).join("")}</span>${note ? ` <span class="n">${md(note)}</span>` : ""}</li>`;
+    });
+    h += "</ul></div></section>";
+  });
+  $("#v-names").innerHTML = h;
+}
+
+function renderStory() {
+  let h = "", inQ = false, buf = [];
+  D.story.split("\n").forEach(l => {
+    if (l.trim() === '"""') {
+      if (inQ) { h += `<blockquote>${esc(buf.join("\n"))}</blockquote>`; buf = []; }
+      inQ = !inQ; return;
+    }
+    if (inQ) { buf.push(l); return; }
+    if (l.startsWith("# ")) h += `<h2>${esc(l.slice(2))}</h2>`;
+    else if (l.trim()) h += `<p>${md(l)}</p>`;
+  });
+  const f = p => `lists/${p}`;
+  const s = D.stats;
+  h += `<h2>How it was made</h2>
+  <p>One task, run four ways in parallel on 6 Nov 2026. The first three each made one flat list. The fourth made types first, then picks inside each type.</p>
+  <div class="facts"><table>
+    <thead><tr><th>List</th><th>Items</th><th>How</th></tr></thead>
+    <tbody>
+      <tr><td><a href="#types">App types</a> · <a href="${f("a3-app-types.md")}" target="_blank" rel="noopener">md</a></td><td class="n">${num(s.a3)} picks in ${s.types} types</td><td>Phase 1: five lenses (structured, community, wild internet, Petr's Instagram saves, Petr's notes) gave 240 categories, merged to 128 by the rule «not what can be IN type 1. instead what can BE type 1». Phase 2: 3–5 picks per type, one subagent per batch.</td></tr>
+      <tr><td><a href="#tech">Spec list</a> · <a href="${f("a2-spec-catalog.md")}" target="_blank" rel="noopener">md</a></td><td class="n">${num(s.a2)}</td><td>Opus agent with a written <a href="${f("a2-spec.md")}" target="_blank" rel="noopener">spec</a>, 36 web searches.</td></tr>
+      <tr><td>Petr's words · <a href="${f("a1-petr-words.md")}" target="_blank" rel="noopener">md</a></td><td class="n">${num(s.a1)}</td><td>Opus agent given the request in Petr's own words. From memory.</td></tr>
+      <tr><td>Direct · <a href="${f("a0-direct.md")}" target="_blank" rel="noopener">md</a></td><td class="n">${num(s.a0)}</td><td>Claude answering directly. From memory.</td></tr>
+    </tbody></table></div>
+  <p>Together: ${num(s.names)} distinct names. 61% of the app-type picks appear in none of the flat lists.</p>
+  <p>Checks: counts by script; five news claims in the spec list checked by web search, four right and one fixed. The shared search budget ran out during the run, so many short notes in the Petr's-words list and the app types were not web-checked.</p>`;
+  $("#v-story").innerHTML = `<div class="story">${h}</div>`;
+}
+
+const RENDER = { types: renderTypes, tech: renderTech, names: renderNames, story: renderStory };
+const txt = el => (el._t ??= el.textContent.toLowerCase());
+const marked = new Set();
+function unmark() { marked.forEach(el => { el.innerHTML = el._h; }); marked.clear(); }
+function mark(el, q) {
+  if (marked.size > 600) return;
+  if (el._h === undefined) el._h = el.innerHTML;
+  const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), nodes = [];
+  while (w.nextNode()) nodes.push(w.currentNode);
+  nodes.forEach(n => {
+    const i = n.data.toLowerCase().indexOf(q);
+    if (i < 0) return;
+    const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + q.length);
+    r.surroundContents(document.createElement("mark"));
+  });
+  marked.add(el);
+}
+
+function filter(view, q) {
+  const root = $("#v-" + view);
+  let shown = 0;
+  unmark();
+  const headHits = view !== "names";
+  $$(".sec", root).forEach(sec => {
+    const secHit = !q || (headHits && txt($("h2", sec)).includes(q));
+    if (q && secHit) mark($("h2", sec), q);
+    let secAny = false;
+    $$(".grp, .cat", sec).forEach(g => {
+      const head = $("h3", g);
+      const gHit = secHit || (headHits && head && txt(head).includes(q));
+      if (q && head && headHits && txt(head).includes(q)) mark(head, q);
+      let any = false;
+      $$("li", g).forEach(li => {
+        const hit = gHit || txt(li).includes(q);
+        li.hidden = !hit;
+        if (hit) { any = true; shown++; if (q && txt(li).includes(q)) mark(li, q); }
+      });
+      g.hidden = !any;
+      if (any) secAny = true;
+    });
+    sec.hidden = !secAny;
+  });
+  if (view === "tech") $$(".secnav a").forEach(a => { a.hidden = document.getElementById(a.dataset.sec).hidden; });
+  $("#empty").hidden = !q || shown > 0;
+  $("#status").textContent = q ? `${num(shown)} match${shown === 1 ? "" : "es"} for “${q}”` : "";
+}
+
+let current = "types";
+function show() {
+  let v = location.hash.slice(1);
+  if (!VIEWS.includes(v)) v = "types";
+  current = v;
+  if (!rendered[v]) { RENDER[v](); rendered[v] = true; }
+  VIEWS.forEach(x => { $("#v-" + x).hidden = x !== v; });
+  $$(".tabs a").forEach(a => a.dataset.view === v ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  $("#lede").innerHTML = LEDE[v];
+  $("#lede").hidden = !LEDE[v];
+  const q = $("#q").value.trim().toLowerCase();
+  if (v === "story") { $("#status").textContent = ""; $("#empty").hidden = true; }
+  else filter(v, q);
+}
+
+let timer;
+$("#q").addEventListener("input", () => {
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    if (current === "story") { location.hash = "names"; return; }
+    filter(current, $("#q").value.trim().toLowerCase());
+  }, 90);
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "/" && document.activeElement !== $("#q")) { e.preventDefault(); $("#q").focus(); }
+  else if (e.key === "Escape" && document.activeElement === $("#q")) { $("#q").value = ""; filter(current, ""); }
+});
+$("#repo").href = D.repo;
+addEventListener("hashchange", show);
+show();
+</script>
